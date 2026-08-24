@@ -1,0 +1,38 @@
+import javax.swing.JOptionPane;
+
+public class Exercicio2 {
+    public static void main(String[] args) {
+
+        int dividendo;
+        int divisor;
+
+        do {
+            dividendo = Integer.parseInt(
+                JOptionPane.showInputDialog("Digite o dividendo:")
+            );
+
+            divisor = Integer.parseInt(
+                JOptionPane.showInputDialog("Digite o divisor:")
+            );
+
+            if (divisor == 0) {
+                JOptionPane.showMessageDialog(
+                    null,
+                    "O divisor não pode ser zero!"
+                );
+            }
+
+        } while (divisor == 0);
+
+        int quociente = dividendo / divisor;
+        int resto = dividendo % divisor;
+
+        JOptionPane.showMessageDialog(
+            null,
+            "Dividendo: " + dividendo +
+            "\nDivisor: " + divisor +
+            "\nQuociente: " + quociente +
+            "\nResto: " + resto
+        );
+    }
+}
